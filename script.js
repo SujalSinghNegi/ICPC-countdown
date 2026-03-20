@@ -15,8 +15,11 @@ function updateTimer() {
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
   const seconds = Math.floor((diff / 1000) % 60);
 
-  document.getElementById("timer").innerText =
-    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+document.getElementById("timer").innerHTML =
+  `${days}<span style="font-size:30px">d</span> 
+   ${hours}<span style="font-size:30px">h</span> 
+   ${minutes}<span style="font-size:30px">m</span> 
+   ${seconds}<span style="font-size:30px">s</span>`;
 }
 
 // update every second
